@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Settings — SMM Assistant{% endblock %}
+{% block content %}
+<h2>Settings</h2>
+<form method="post">
+  {{ form.hidden_tag() }}
+  <div>
+    {{ form.vk_api_id.label }}<br/>{{ form.vk_api_id(size=80) }}
+    {% for e in form.vk_api_id.errors %}<div class="flash">{{ e }}</div>{% endfor %}
+  </div>
+  <div>
+    {{ form.vk_group_id.label }}<br/>{{ form.vk_group_id(size=24) }}
+    {% for e in form.vk_group_id.errors %}<div class="flash">{{ e }}</div>{% endfor %}
+  </div>
+  {{ form.submit(class_="btn") }}
+</form>
+<p style="margin-top:12px">Подсказка: group_id указывается без минуса. Токен — строка вида <code>vk1.a...</code>.</p>
+{% endblock %}
+
+

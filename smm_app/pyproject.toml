@@ -1,0 +1,18 @@
+[project]
+name = "smm-app"
+version = "0.1.0"
+description = "SMM helper: text/image generation + VK publish + stats"
+requires-python = ">=3.11"
+dependencies = [
+  "openai>=1.46.0",
+  "python-dotenv>=1.0.1",
+  "requests>=2.32.3",
+  "pillow>=10.4.0",
+  "pydantic>=2.9.2",
+  "loguru>=0.7.2",
+  "vk-api>=11.9.9",
+]
+
+[tool.pyright]
+typeCheckingMode = "basic"
+
